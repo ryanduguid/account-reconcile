@@ -32,7 +32,7 @@ Account Move Reconcile Helper
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Provides tools to facilitate reconciliation.
+Show reconciled journal items.
 
 - Display a button on Journal Items to show reconciled lines.
 - Added Balance field in Journal Items (this feature is provided by
