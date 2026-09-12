@@ -578,12 +578,8 @@ msgid "Simple. Amount and Reference"
 msgstr ""
 
 #. module: account_mass_reconcile
-#: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_tree
-msgid "Start Auto Reconcilation"
-msgstr ""
-
-#. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
+#: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_tree
 msgid "Start Auto Reconciliation"
 msgstr ""
 
@@ -595,6 +591,12 @@ msgstr ""
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile_method__task_id
 msgid "Task"
+msgstr ""
+
+#. module: account_mass_reconcile
+#. odoo-python
+#: code:addons/account_mass_reconcile/models/res_config.py:0
+msgid "The reconciliation commit interval must be zero or greater."
 msgstr ""
 
 #. module: account_mass_reconcile
@@ -616,7 +618,7 @@ msgstr ""
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_mass_reconcile_history_search
-msgid "Todays' Reconcilations"
+msgid "Today's Reconciliations"
 msgstr ""
 
 #. module: account_mass_reconcile
