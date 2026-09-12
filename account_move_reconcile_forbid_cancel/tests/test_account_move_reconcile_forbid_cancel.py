@@ -127,6 +127,19 @@ class TestAccountMoveReconcileForbidCancel(BaseCommon):
         invoice.button_draft()
         self.assertEqual(invoice.state, "draft")
 
+    def test_client_context_cannot_bypass_reconciliation_lock(self):
+        for invoice in (self.purchase_invoice, self.sale_invoice):
+            for action in ("button_draft", "button_cancel"):
+                with self.subTest(invoice=invoice.id, action=action):
+                    with self.assertRaises(ValidationError):
+                        getattr(
+                            invoice.with_context(
+                                test_reconcile_forbid_cancel=True,
+                                skip_reconcile_forbid_cancel=True,
+                            ),
+                            action,
+                        )()
+
     def test_extra_invoice_process_cancel(self):
         invoice = self._create_invoice("out_invoice")
         invoice.action_post()

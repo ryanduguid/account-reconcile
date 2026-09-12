@@ -10,9 +10,7 @@ provide:
 - Monitoring of reconciliation runs with an history which keep track of
   the reconciled Journal items.
 
-2 simple reconciliation methods are integrated in this module, the
-simple reconciliations works on 2 lines (1 debit / 1 credit) and do not
-allow partial reconciliation, they also match on 1 key, partner or
-Journal item name. There is also an option for 'most recent move line'
-or 'oldest move line' which is used to choose the move to be reconciled
-if more than one is found.
+Three simple reconciliation methods match by partner, journal item name or
+reference. Each reconciles two lines, one debit and one credit, without partial
+reconciliation. Choose the most recent or oldest move line when more than one
+matches.

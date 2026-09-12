@@ -197,14 +197,7 @@ msgid ""
 " Please check the line with ref: %(ref_value)s \n"
 " \n"
 " Detail: %(error)s"
-msgstr ""
-"O formato de data não é válido. Deve ser DD-MM-AAAA para a coluna: %(rule)s "
-"valor: %(line_value)s\n"
-" \n"
-" \n"
-" Por favor, verifique a linha com ref: %(ref_value)s\n"
-" \n"
-" Detalhe: %(error)s"
+msgstr "O formato de data não é válido. Deve ser YYYY-MM-DD para a coluna: %(rule)s valor: %(line_value)s\n \n \n Por favor, verifique a linha com ref: %(ref_value)s\n \n Detalhe: %(error)s"
 
 #. module: account_move_base_import
 #. odoo-python

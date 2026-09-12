@@ -43,11 +43,7 @@ msgid ""
 "            the entries should be reconciled.\n"
 "            You can select one or many reconciliation methods which will\n"
 "            be run sequentially to match the entries between them."
-msgstr ""
-"Een afletteringsprofiel specificeert voor een account hoe\n"
-".........de regels dienen te worden afgeletterd\n"
-"........Er kunnen een of meerdere afletteringsmethodes worden gekozen welke\n"
-"........op volgorde worden afgehandeld om de invoeren te koppelen."
+msgstr "Een afletteringsprofiel specificeert voor een account hoe\nde regels dienen te worden afgeletterd\nEr kunnen een of meerdere afletteringsmethodes worden gekozen welke\nop volgorde worden afgehandeld om de invoeren te koppelen."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__account

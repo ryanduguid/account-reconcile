@@ -33,9 +33,8 @@ msgstr ""
 
 #. module: account_move_base_import
 #: model:ir.model,name:account_move_base_import.model_account_move_completion_rule
-#, fuzzy
 msgid "Account move completion method"
-msgstr "account.move.completion.rule"
+msgstr "Metoda dovršavanja temeljnice"
 
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.view_account_move_filter
@@ -365,7 +364,7 @@ msgstr ""
 #. module: account_move_base_import
 #: model:ir.model,name:account_move_base_import.model_account_move_line
 msgid "Journal Item"
-msgstr "Stavka devnika"
+msgstr "Stavka dnevnika"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_bank_statement_line__used_for_completion
@@ -606,9 +605,8 @@ msgstr ""
 
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.view_account_move_filter
-#, fuzzy
 msgid "To Complete"
-msgstr "Automatsko dovršavanje"
+msgstr "Za dovršiti"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,help:account_move_base_import.field_account_journal__split_counterpart

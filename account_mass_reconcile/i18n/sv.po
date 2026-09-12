@@ -45,11 +45,7 @@ msgid ""
 "            the entries should be reconciled.\n"
 "            You can select one or many reconciliation methods which will\n"
 "            be run sequentially to match the entries between them."
-msgstr ""
-"En avstämningsprofil specificerar, för ett konto, hur\n"
-"            posterna ska stämmas av.\n"
-"            Du kan välja en eller flera avstämningsmetoder som kommer att\n"
-"            kommer att köras sekventiellt för att matcha posterna mellan dem."
+msgstr "En avstämningsprofil specificerar, för ett konto, hur\n            posterna ska stämmas av.\n            Du kan välja en eller flera avstämningsmetoder som kommer att köras sekventiellt för att matcha posterna mellan dem."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__account
@@ -145,7 +141,7 @@ msgstr "Klicka för att lägga till en avstämningsprofil."
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_account_config
 msgid "Commit frequency"
-msgstr "Begå frekvens"
+msgstr "Commit-frekvens"
 
 #. module: account_mass_reconcile
 #: model:ir.model,name:account_mass_reconcile.model_res_company
@@ -291,16 +287,14 @@ msgstr "Historia"
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_res_company__reconciliation_commit_every
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_res_config_settings__reconciliation_commit_every
 msgid "How often to commit when performing automatic reconciliation."
-msgstr "Hur ofta man ska göra åtaganden vid automatisk avstämning."
+msgstr "Hur ofta commit ska göras vid automatisk avstämning."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_account_config
 msgid ""
 "How often to commit when performing automatic reconciliation.\n"
 "                  Leave zero to commit only at the end of the process."
-msgstr ""
-"Hur ofta ska åtagande göras vid automatisk avstämning.\n"
-"                  Lämna noll till åtagande endast i slutet av processen."
+msgstr "Hur ofta commit ska göras vid automatisk avstämning.\nAnge 0 för att göra commit endast i slutet av processen."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__id
@@ -381,7 +375,7 @@ msgstr "Senaste historia"
 #: model:ir.model.fields,help:account_mass_reconcile.field_res_company__reconciliation_commit_every
 #: model:ir.model.fields,help:account_mass_reconcile.field_res_config_settings__reconciliation_commit_every
 msgid "Leave zero to commit only at the end of the process."
-msgstr "Lämna noll till åtagande först i slutet av processen."
+msgstr "Ange 0 för att göra commit endast i slutet av processen."
 
 #. module: account_mass_reconcile
 #: model:ir.actions.act_window,name:account_mass_reconcile.action_account_mass_reconcile

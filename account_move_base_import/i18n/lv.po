@@ -594,7 +594,7 @@ msgstr "Sērija"
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__split_counterpart
 msgid "Split Counterpart"
-msgstr "Saistītie žurnāli"
+msgstr "Sadalīt korespondējošo kontu"
 
 #. module: account_move_base_import
 #. odoo-python
@@ -672,11 +672,7 @@ msgid ""
 " Please check the line with ref %(value_ref)s:\n"
 " \n"
 " Detail: %(error)s"
-msgstr ""
-"Kolonnas %(line_value)s vērtība %(rule)s nav derīga.\n"
-" Lūdzu, pārbaudiet rindu ar atsauci %(value_ref)s:\n"
-" \n"
-" Sīkāka informācija: %(error)s"
+msgstr "Kolonnas %(rule)s vērtība %(line_value)s nav derīga.\n Lūdzu, pārbaudiet rindu ar atsauci %(value_ref)s:\n \n Sīkāka informācija: %(error)s"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__website_message_ids

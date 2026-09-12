@@ -505,7 +505,7 @@ msgstr "Broj poruka sa greškom isporuke"
 #. module: account_mass_reconcile
 #: model:ir.model,name:account_mass_reconcile.model_mass_reconcile_options
 msgid "Options of a reconciliation profile"
-msgstr "Oprije profila zatvaranja"
+msgstr "Opcije profila zatvaranja"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
@@ -605,7 +605,7 @@ msgstr "Zadatak"
 #. module: account_mass_reconcile
 #: model:ir.model.fields,help:account_mass_reconcile.field_account_mass_reconcile_method__sequence
 msgid "The sequence field is used to order the reconcile method"
-msgstr "Polje sekvenca se koristi za određivanje redosljeda metoda zatvaranja"
+msgstr "Polje sekvenca se koristi za određivanje redoslijeda metoda zatvaranja"
 
 #. module: account_mass_reconcile
 #. odoo-python

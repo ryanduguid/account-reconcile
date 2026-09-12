@@ -177,17 +177,17 @@ class AccountMassReconcile(models.Model):
         return auto_rec_id.automatic_reconcile()
 
     def run_reconcile(self):
-        def find_reconcile_ids(fieldname, move_line_ids):
+        def find_reconcile_ids(env, fieldname, move_line_ids):
             if not move_line_ids:
                 return []
-            self.env.flush_all()
+            env.flush_all()
             sql = """
                 SELECT DISTINCT %s FROM account_move_line
                 WHERE %s IS NOT NULL AND id in %s
             """
             params = [AsIs(fieldname), AsIs(fieldname), tuple(move_line_ids)]
-            self.env.cr.execute(sql, params)
-            res = self.env.cr.fetchall()
+            env.cr.execute(sql, params)
+            res = env.cr.fetchall()
             return [row[0] for row in res]
 
         # we use a new cursor to be able to commit the reconciliation
@@ -230,7 +230,12 @@ class AccountMassReconcile(models.Model):
 
                     all_ml_rec_ids += ml_rec_ids
 
-                reconcile_ids = find_reconcile_ids("full_reconcile_id", all_ml_rec_ids)
+                if ctx["commit_every"]:
+                    new_env.flush_all()
+                    new_cr.commit()  # pylint: disable=invalid-commit
+                reconcile_ids = find_reconcile_ids(
+                    new_env, "full_reconcile_id", all_ml_rec_ids
+                )
                 self.env["mass.reconcile.history"].create(
                     {
                         "mass_reconcile_id": rec.id,
@@ -328,7 +333,7 @@ class AccountMassReconcile(models.Model):
         if run_all:
             reconciles.run_reconcile()
             return True
-        reconciles.sorted(key=_get_date)
+        reconciles = reconciles.sorted(key=_get_date)
         older = reconciles[0]
         older.run_reconcile()
         return True

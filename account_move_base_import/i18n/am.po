@@ -90,7 +90,7 @@ msgstr ""
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.move_importer_view
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #. module: account_move_base_import
 #: model:ir.model.fields,help:account_move_base_import.field_account_journal__receivable_account_id
@@ -168,13 +168,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_move_completion_rule__create_uid
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_move_completion_rule__create_date
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: account_move_base_import
 #. odoo-python

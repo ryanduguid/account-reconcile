@@ -127,7 +127,7 @@ class AccountJournal(models.Model):
                 payment += move_line_vals["credit"]
         if self.split_counterpart:
             if refund:
-                transfer_lines.append(refund)
+                transfer_lines.append(refund + (commission if not payment else 0.0))
             if payment:
                 transfer_lines.append(payment + commission)
         else:
@@ -313,7 +313,6 @@ class AccountJournal(models.Model):
         :return: list: list of ids of the created account.bank.statement
         """
         filename = self._context.get("file_name", None)
-        attachment_obj = self.env["ir.attachment"]
         if filename:
             (filename, __) = os.path.splitext(filename)
         parser = new_move_parser(self, ftype=ftype, move_ref=filename)
@@ -326,10 +325,6 @@ class AccountJournal(models.Model):
                 ftype=ftype,
             )
             res |= move
-        if res:
-            attachment_vals = self._get_attachment_data(res, file_stream, ftype)
-            if attachment_vals:
-                attachment_obj.create(attachment_vals)
         return res
 
     def _move_import(self, parser, file_stream, result_row_list=None, ftype="csv"):

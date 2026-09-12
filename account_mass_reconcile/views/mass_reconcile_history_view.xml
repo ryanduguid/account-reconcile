@@ -8,14 +8,14 @@
                 <filter
                     icon="terp-go-today"
                     name="Today"
-                    domain="[('date','&lt;', time.strftime('%%Y-%%m-%%d 23:59:59')), ('date','&gt;=', time.strftime('%%Y-%%m-%%d 00:00:00'))]"
-                    help="Todays' Reconcilations"
+                    domain="[('date','&lt;', (context_today()+datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00')), ('date','&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                    help="Today's Reconciliations"
                 />
                 <filter
                     icon="terp-go-week"
                     name="7 Days"
                     help="Reconciliations of last 7 days"
-                    domain="[('date','&lt;', time.strftime('%%Y-%%m-%%d 23:59:59')),('date','&gt;=',(datetime.date.today()-datetime.timedelta(days=7)).strftime('%%Y-%%m-%%d 00:00:00'))]"
+                    domain="[('date','&lt;', (context_today()+datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00')),('date','&gt;=',(context_today()-datetime.timedelta(days=6)).strftime('%Y-%m-%d 00:00:00'))]"
                 />
                 <separator orientation="vertical" />
                 <field name="mass_reconcile_id" />

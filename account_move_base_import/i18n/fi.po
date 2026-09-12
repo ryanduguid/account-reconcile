@@ -218,9 +218,8 @@ msgstr ""
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__file_name
-#, fuzzy
 msgid "File Name"
-msgstr "Nimi"
+msgstr "Tiedoston nimi"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__message_follower_ids

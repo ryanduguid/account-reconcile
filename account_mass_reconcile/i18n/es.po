@@ -118,7 +118,7 @@ msgstr "Recuento de anexos"
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
 msgid "Automatic Mass Reconcile"
-msgstr "Conciliación automática sencilla"
+msgstr "Conciliación automática masiva"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.mass_reconcile_history_form
@@ -642,7 +642,7 @@ msgstr "No hay histórico de elementos conciliados en la tarea: %s."
 #: code:addons/account_mass_reconcile/models/mass_reconcile.py:0
 #, python-format
 msgid "There was an error during reconciliation : %s"
-msgstr "No han habido errores durante una reconciliación : %s"
+msgstr "Se produjo un error durante la conciliación: %s"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_mass_reconcile_history_search

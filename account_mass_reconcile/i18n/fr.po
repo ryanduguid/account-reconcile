@@ -163,9 +163,8 @@ msgstr "Société"
 
 #. module: account_mass_reconcile
 #: model:ir.model,name:account_mass_reconcile.model_res_config_settings
-#, fuzzy
 msgid "Config Settings"
-msgstr "account.config.settings"
+msgstr "Paramètres de configuration"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
@@ -393,7 +392,7 @@ msgstr "Lettrage automatisé"
 #. module: account_mass_reconcile
 #: model:ir.actions.act_window,name:account_mass_reconcile.action_mass_reconcile_history
 msgid "Mass Automatic Reconcile History"
-msgstr "Lettrage automatisé"
+msgstr "Historique des lettrages automatisés"
 
 #. module: account_mass_reconcile
 #: model:ir.model,name:account_mass_reconcile.model_mass_reconcile_advanced
@@ -437,16 +436,11 @@ msgstr ""
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
-#, fuzzy
 msgid ""
 "Match multiple debit vs multiple credit entries. Allow partial "
 "reconciliation. The lines should have the same partner, and the credit entry "
 "ref. is matched with the debit entry ref. or name."
-msgstr ""
-"Le Lettrage peut s'effectuer sur plusieurs écritures de débit et crédit. Le "
-"Lettrage partiel est autorisé. Les écritures doivent avoir le même "
-"partenaire et la référence sur les écritures de crédit doit se retrouver "
-"dans la référence ou la description sur les écritures de débit."
+msgstr "Le Lettrage peut s'effectuer sur plusieurs écritures de débit et crédit. Le Lettrage partiel est autorisé. Les écritures doivent avoir le même partenaire et la référence sur les écritures de crédit doit se retrouver dans la référence ou la description sur les écritures de débit."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form

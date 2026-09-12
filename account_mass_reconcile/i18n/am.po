@@ -172,7 +172,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_partner__create_uid
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_reference__create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__create_date
@@ -184,7 +184,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_partner__create_date
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_reference__create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile_method__date_base_on

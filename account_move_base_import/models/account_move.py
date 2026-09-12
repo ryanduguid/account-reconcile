@@ -87,7 +87,11 @@ class AccountMoveCompletionRule(models.Model):
             )
 
         invoices = inv_obj.search(
-            [(number_field, "=", line.name.strip()), ("move_type", "in", type_domain)]
+            [
+                (number_field, "=", line.name.strip()),
+                ("move_type", "in", type_domain),
+                ("company_id", "=", line.company_id.id),
+            ]
         )
         if invoices:
             if len(invoices) == 1:
@@ -172,10 +176,16 @@ class AccountMoveCompletionRule(models.Model):
         """
         res = {}
         partner_obj = self.env["res.partner"]
-        or_regex = f".*;? *{line.name} *;?.*"
         self.env["res.partner"].flush_model(["bank_statement_label"])
-        sql = "SELECT id from res_partner" " WHERE bank_statement_label ~* %s"
-        self.env.cr.execute(sql, (or_regex,))
+        sql = """
+            SELECT id FROM res_partner
+            WHERE EXISTS (
+                SELECT 1
+                FROM unnest(string_to_array(bank_statement_label, ';')) AS labels(label)
+                WHERE btrim(label) <> '' AND strpos(lower(%s), lower(btrim(label))) > 0
+            )
+        """
+        self.env.cr.execute(sql, (line.name or "",))
         partner_ids = self.env.cr.fetchall()
         partners = partner_obj.browse([x[0] for x in partner_ids])
         if partners:
@@ -367,11 +377,11 @@ class AccountMove(models.Model):
         already_completed checkbox so we won't compute them again unless the
         user untick them!
         """
-        compl_lines = 0
         for move in self:
+            compl_lines = 0
             msg_lines = []
-            res = False
             for line in move.line_ids:
+                res = False
                 try:
                     res = line._get_line_values_from_rules()
                     if res:

@@ -661,7 +661,7 @@ msgstr ""
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__import_type
 msgid "Type of import"
-msgstr "İçeri aktarim tipi"
+msgstr "İçeri aktarım tipi"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__autovalidate_completed_move

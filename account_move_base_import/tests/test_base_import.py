@@ -10,6 +10,7 @@ from operator import attrgetter
 import odoo
 import odoo.tests
 from odoo import fields
+from odoo.exceptions import UserError
 
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 
@@ -77,6 +78,26 @@ class TestCodaImport(AccountTestInvoicingCommon):
         )
         move = self._import_file(file_name)
         self._validate_imported_move(move)
+
+    def test_missing_import_filename(self):
+        wizard = self.import_wizard_obj.create(
+            {
+                "journal_id": self.journal.id,
+                "input_statement": base64.b64encode(b"label,date,amount\n"),
+            }
+        )
+        with self.assertRaisesRegex(UserError, "file with an extension"):
+            wizard.import_statement()
+
+    def test_import_creates_one_attachment_per_move(self):
+        file_name = odoo.tools.misc.file_path(
+            "account_move_base_import/tests/data/statement.csv"
+        )
+        move = self._import_file(file_name)
+        attachments = self.env["ir.attachment"].search(
+            [("res_model", "=", "account.move"), ("res_id", "=", move.id)]
+        )
+        self.assertEqual(len(attachments), 1)
 
     def _validate_imported_move(self, move):
         self.assertEqual("/", move.name)

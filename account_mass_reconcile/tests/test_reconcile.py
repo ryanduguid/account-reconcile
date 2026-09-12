@@ -1,6 +1,8 @@
 # © 2014-2016 Camptocamp SA (Damien Crier)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from unittest.mock import patch
+
 import odoo.tests
 from odoo import exceptions, fields
 
@@ -41,6 +43,19 @@ class TestReconcile(AccountTestInvoicingCommon):
     def test_last_history(self):
         mass_rec_last_hist = self.mass_rec.last_history
         self.assertEqual(self.rec_history, mass_rec_last_hist)
+
+    def test_negative_commit_interval_is_rejected(self):
+        with self.assertRaises(exceptions.ValidationError), self.cr.savepoint():
+            self.env.company.reconciliation_commit_every = -1
+
+    def test_scheduler_runs_profile_without_history_first(self):
+        profiles = self.mass_rec | self.mass_rec_no_history
+        with (
+            patch.object(type(profiles), "search", return_value=profiles),
+            patch.object(type(profiles), "run_reconcile", autospec=True) as run,
+        ):
+            self.mass_rec_obj.run_scheduler()
+        run.assert_called_once_with(self.mass_rec_no_history)
 
     def test_last_history_empty(self):
         mass_rec_last_hist = self.mass_rec_no_history.last_history.id

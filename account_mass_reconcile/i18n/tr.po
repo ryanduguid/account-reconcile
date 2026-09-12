@@ -47,14 +47,7 @@ msgid ""
 "            the entries should be reconciled.\n"
 "            You can select one or many reconciliation methods which will\n"
 "            be run sequentially to match the entries between them."
-msgstr ""
-"Bir denkleştirme profili, bir hesap için, nasıl\\n"
-"\n"
-"            kayıtları denkleştirilmelidir.\\n"
-"\n"
-"            Bir veya birden fazla denkleştirme yöntemi seçebilirsiniz\\n"
-"\n"
-"            aralarındaki kayıtları eşleştirmek için sırayla çalıştırılabilir."
+msgstr "Bir denkleştirme profili, bir hesap için, nasıl\n            kayıtları denkleştirilmelidir.\n            Bir veya birden fazla denkleştirme yöntemi seçebilirsiniz\n            aralarındaki kayıtları eşleştirmek için sırayla çalıştırılabilir."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__account
@@ -229,7 +222,7 @@ msgstr "Görünen İsim"
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_tree
 msgid "Display items reconciled on the last run"
-msgstr "Son çalıştırmada denleştirilen öğeleri göster"
+msgstr "Son çalıştırmada denkleştirilen öğeleri göster"
 
 #. module: account_mass_reconcile
 #: model:ir.actions.server,name:account_mass_reconcile.ir_cron_run_reconciliations_ir_actions_server
@@ -304,10 +297,7 @@ msgstr "Otomatik denkleştirme uygulanıyorken ne sıklıkta işleyecek."
 msgid ""
 "How often to commit when performing automatic reconciliation.\n"
 "                  Leave zero to commit only at the end of the process."
-msgstr ""
-"Otomatik uzlaştırma gerçekleştirirken ne sıklıkta taahhüt etmek.\\n"
-"\n"
-"                  Yalnızca işlemin sonunda işlemek için sıfır bırakın."
+msgstr "Otomatik uzlaştırma gerçekleştirirken ne sıklıkta taahhüt etmek.\n                  Yalnızca işlemin sonunda işlemek için sıfır bırakın."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__id
@@ -458,11 +448,7 @@ msgid ""
 "Match one debit line vs one credit line. Do not allow partial "
 "reconciliation. The lines should have the same amount (with the write-off) "
 "and the same name to be reconciled."
-msgstr ""
-"Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye \n"
-"izin verin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı ada "
-"\n"
-"sahip olmalıdır."
+msgstr "Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye izin vermeyin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı ada \nsahip olmalıdır."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
@@ -470,10 +456,7 @@ msgid ""
 "Match one debit line vs one credit line. Do not allow partial "
 "reconciliation. The lines should have the same amount (with the write-off) "
 "and the same partner to be reconciled."
-msgstr ""
-"Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye \n"
-"izin verin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı İş \n"
-"Ortağına sahip olmalıdır."
+msgstr "Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye izin vermeyin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı İş \nOrtağına sahip olmalıdır."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
@@ -481,10 +464,7 @@ msgid ""
 "Match one debit line vs one credit line. Do not allow partial "
 "reconciliation. The lines should have the same amount (with the write-off) "
 "and the same reference to be reconciled."
-msgstr ""
-"Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye\n"
-"izin verin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı\n"
-"referansa sahip olmalıdır."
+msgstr "Bir borç satırı ile bir alacak satırını denkleştirin. Kısmi denkleştirmeye izin vermeyin. Satırlar aynı miktarda (silme ile) ve denkleştirilecek aynı\nreferansa sahip olmalıdır."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__message_has_error

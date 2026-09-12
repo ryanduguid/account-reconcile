@@ -47,12 +47,7 @@ msgid ""
 "            the entries should be reconciled.\n"
 "            You can select one or many reconciliation methods which will\n"
 "            be run sequentially to match the entries between them."
-msgstr ""
-"Un profilo di riconciliazione indica, per un conto, come\n"
-"            le registrazioni devono essere riconciliate.\n"
-"            Si possono selezionare una o più metodi di riconciliazione che\n"
-"            verranno eseguite sequenzialmente per far corrispondere le "
-"registrazioni tra di loro."
+msgstr "Un profilo di riconciliazione indica, per un conto, come\n            le registrazioni devono essere riconciliate.\n            Si possono selezionare uno o più metodi di riconciliazione che\n            verranno eseguiti sequenzialmente per far corrispondere le registrazioni tra di loro."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__account
@@ -302,9 +297,7 @@ msgstr ""
 msgid ""
 "How often to commit when performing automatic reconciliation.\n"
 "                  Leave zero to commit only at the end of the process."
-msgstr ""
-"Frequenza della conferma quando si esegue la riconciliazione automatica..\n"
-"                  Lasciare a zero per confermare solo alla fine del processo."
+msgstr "Frequenza della conferma quando si esegue la riconciliazione automatica.\n                  Lasciare a zero per confermare solo alla fine del processo."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__id
@@ -467,10 +460,7 @@ msgid ""
 "Match one debit line vs one credit line. Do not allow partial "
 "reconciliation. The lines should have the same amount (with the write-off) "
 "and the same partner to be reconciled."
-msgstr ""
-"Associa una riga di debito con una riga di credito. Non consente "
-"riconciliazione parziale. Le righe devono avere lo stesso valore (con lo "
-"stono) e lo stesso partner da riconciliare."
+msgstr "Associa una riga di debito con una riga di credito. Non consente riconciliazione parziale. Le righe devono avere lo stesso valore (con lo storno) e lo stesso partner da riconciliare."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
@@ -564,7 +554,7 @@ msgstr "Riconciliazioni"
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_mass_reconcile_history_search
 msgid "Reconciliations of last 7 days"
-msgstr "Riconciliazioni degli ultimi 7giorni"
+msgstr "Riconciliazioni degli ultimi 7 giorni"
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_advanced__partner_ids

@@ -187,7 +187,11 @@ class MassReconcileAdvanced(models.AbstractModel):
                 # are not evaluated
                 return False
 
-        return True
+        try:
+            next(opp_matchers)
+        except StopIteration:
+            return True
+        raise ValueError("Surplus _opposite_matcher")
 
     def _search_opposites(self, move_line, opposite_move_lines):
         """Search the opposite move lines for a move line

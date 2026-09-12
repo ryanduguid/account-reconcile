@@ -351,7 +351,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_partner__write_uid
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_reference__write_uid
 msgid "Last Updated by"
-msgstr "Zadnja izmjena"
+msgstr "Ažurirao"
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__write_date
@@ -363,7 +363,7 @@ msgstr "Zadnja izmjena"
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_partner__write_date
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_mass_reconcile_simple_reference__write_date
 msgid "Last Updated on"
-msgstr "Zadnja izmjena"
+msgstr "Datum ažuriranja"
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__last_history
