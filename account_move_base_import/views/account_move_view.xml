@@ -75,7 +75,7 @@
                     name="to_complete"
                     string="To Complete"
                     domain="[
-                        ('state','!=','posted'),
+                        ('state', '=', 'draft'),
                         ('journal_id.used_for_completion', '=', True),
                         ('line_ids.already_completed', '=', False)]"
                     help="Account move that should be completed manually"

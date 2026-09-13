@@ -237,11 +237,7 @@ msgid ""
 "of this label is include in the bank statement line, the partner will be "
 "automatically filled (as long as you use this method/rules in your statement "
 "profile)."
-msgstr ""
-"Inserire le varie etichette presenti nel bilancio separate da ;. Se una di "
-"queste etichette è inclusa nella riga del bilancio, il partner verrà "
-"compilato automaticamente (finché si utuilizza questo metodo/regola nel "
-"profilo bilancio)."
+msgstr "Inserire le varie etichette presenti nell'estratto conto separate da ;. Se una di queste etichette è inclusa nella riga dell'estratto conto, il partner verrà compilato automaticamente (finché si utilizza questo metodo/regola nel profilo estratto conto)."
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__file_name
@@ -313,7 +309,7 @@ msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 #: model:ir.actions.act_window,name:account_move_base_import.move_importer_action
 #: model:ir.ui.menu,name:account_move_base_import.move_importer_menu
 msgid "Import Batch File"
-msgstr "Impora file batch"
+msgstr "Importa file batch"
 
 #. module: account_move_base_import
 #: model:ir.model,name:account_move_base_import.model_credit_statement_import
@@ -328,12 +324,12 @@ msgstr "Importa riassunto parametri"
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.journal_importer_view_form
 msgid "Import batch file"
-msgstr "Impora file batch"
+msgstr "Importa file batch"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__journal_id
 msgid "Import configuration parameter"
-msgstr "Importa paramtero configurazione"
+msgstr "Importa parametro configurazione"
 
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.move_importer_view
@@ -481,9 +477,7 @@ msgstr "Metodo"
 msgid ""
 "Missing column! Column %(column)s you try to import is not present in the "
 "move line!"
-msgstr ""
-"Colonna mancante! La colonna %(column)s che si cerca di importare none è "
-"presente nella riga movimento!"
+msgstr "Colonna mancante! La colonna %(column)s che si cerca di importare non è presente nella riga movimento!"
 
 #. module: account_move_base_import
 #. odoo-python
@@ -517,7 +511,7 @@ msgstr "Nessun file buffer fornito."
 #. odoo-python
 #: code:addons/account_move_base_import/models/account_journal.py:0
 msgid "No commission account is set on the journal."
-msgstr "Nessun conto commisisone impostato nel registro."
+msgstr "Nessun conto commissione impostato nel registro."
 
 #. module: account_move_base_import
 #. odoo-python
@@ -577,7 +571,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__receivable_account_id
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__receivable_account_id
 msgid "Receivable/Payable Account"
-msgstr "Conto recivibile/pagabile"
+msgstr "Conto ricevibile/pagabile"
 
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.move_completion_rule_view_form
@@ -605,9 +599,7 @@ msgstr "Dividi contropartita"
 msgid ""
 "Statement ID %(move_name)s auto-completed for %(num_imported)s/"
 "%(number_line)s lines completed"
-msgstr ""
-"Operazione ID %(move_name)s auto-completata per %(num_imported)s/"
-"%(number_line)s righe completata"
+msgstr "Statement ID %(move_name)s auto-completata per %(num_imported)s/%(number_line)s righe completate"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__input_statement
@@ -678,11 +670,7 @@ msgid ""
 " Please check the line with ref %(value_ref)s:\n"
 " \n"
 " Detail: %(error)s"
-msgstr ""
-"Il valore %(line_value)s della colonna %(rule)s nom è valido.\n"
-"Controllare la riga con riferimento %(value_ref)s:\n"
-"\n"
-"Dettaglio: %(error)s"
+msgstr "Il valore %(line_value)s della colonna %(rule)s non è valido.\nControllare la riga con riferimento %(value_ref)s:\n\nDettaglio: %(error)s"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__website_message_ids
@@ -701,9 +689,7 @@ msgstr "Cronologia comunicazioni sito web"
 msgid ""
 "When this checkbox is ticked, the auto-completion process/button will ignore "
 "this line."
-msgstr ""
-"Quanto selezionata, il processo/pulsante di auto-completamento ignorerà "
-"questa riga."
+msgstr "Quando selezionata, il processo/pulsante di auto-completamento ignorerà questa riga."
 
 #~ msgid "Choose an analytic account to be used on the commission line."
 #~ msgstr "Scegliere un conto analitico da usare nella riga commisione."

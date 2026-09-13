@@ -329,7 +329,7 @@ msgstr "Importer un fichier de lot"
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__journal_id
 msgid "Import configuration parameter"
-msgstr "Importer un paramètre de configuration"
+msgstr "Paramètre de configuration d'importation"
 
 #. module: account_move_base_import
 #: model_terms:ir.ui.view,arch_db:account_move_base_import.move_importer_view

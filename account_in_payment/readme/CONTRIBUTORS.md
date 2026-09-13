@@ -1,1 +1,1 @@
--  Enric Tobella (`Dixmit <https://www.dixmit.com/>`__)
+-  Enric Tobella ([Dixmit](https://www.dixmit.com/))

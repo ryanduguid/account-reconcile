@@ -50,6 +50,8 @@ class CreditPartnerStatementImporter(models.TransientModel):
 
     def _check_extension(self):
         self.ensure_one()
+        if not self.file_name:
+            raise UserError(self.env._("Please use a file with an extension"))
         (__, ftype) = os.path.splitext(self.file_name)
         if not ftype:
             raise UserError(self.env._("Please use a file with an extension"))

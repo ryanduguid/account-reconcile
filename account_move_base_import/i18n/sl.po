@@ -104,9 +104,7 @@ msgstr "Prekliči"
 msgid ""
 "Choose a receivable/payable account to use as the default debit/credit "
 "account."
-msgstr ""
-"Izberite konto terjatev/obveznosti, ki bo uporabljen kot privzeti konto "
-"bremenitve/dobropisa."
+msgstr "Izberite konto terjatev/obveznosti, ki bo uporabljen kot privzeti konto za knjiženje v breme/v dobro."
 
 #. module: account_move_base_import
 #: model:ir.model.fields,help:account_move_base_import.field_account_journal__commission_analytic_account_id

@@ -5,6 +5,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 import datetime
 
+from odoo.exceptions import UserError
+
 from .file_parser import FileParser, float_or_zero
 
 
@@ -57,9 +59,21 @@ class GenericFileParser(FileParser):
         partner_id = False
 
         if line.get("account"):
-            accounts = account_obj.search([("code", "=", line["account"])])
-            if len(accounts) == 1:
-                account_id = accounts[0].id
+            accounts = account_obj.search(
+                [
+                    ("code", "=", line["account"]),
+                    ("company_ids", "in", self.journal.company_id.ids),
+                ]
+            )
+            if len(accounts) != 1:
+                raise UserError(
+                    self.env._(
+                        "Account %(code)s must identify exactly one account "
+                        "in the journal company.",
+                        code=line["account"],
+                    )
+                )
+            account_id = accounts.id
 
         if line.get("partner"):
             partners = partner_obj.search([("name", "=", line["partner"])])

@@ -145,7 +145,7 @@ msgstr "Compte de comissions"
 #. odoo-python
 #: code:addons/account_move_base_import/models/account_journal.py:0
 msgid "Commission amount should not be positive."
-msgstr "L'import de la comissió ha de ser positiu."
+msgstr "L'import de la comissió no ha de ser positiu."
 
 #. module: account_move_base_import
 #. odoo-python

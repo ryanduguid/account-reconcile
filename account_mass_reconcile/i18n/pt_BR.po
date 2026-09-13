@@ -37,9 +37,7 @@ msgstr ""
 msgid ""
 "A matcher %(mkey)s is compared with a matcher %(omkey)s, the _matchers and "
 "_opposite_matchers are probably wrong"
-msgstr ""
-"Uma combinação %(mkey)s é comparada com a combinação %(omkey)s, a combinação "
-"e a combinação em oposição estão provavelmente erradas"
+msgstr "Um comparador %(mkey)s está sendo comparado com um comparador %(omkey)s; _matchers e _opposite_matchers provavelmente estão incorretos"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.actions.act_window,help:account_mass_reconcile.action_account_mass_reconcile

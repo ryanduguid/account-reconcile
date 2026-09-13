@@ -9,9 +9,8 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     def button_draft(self):
-        if not self.env.context.get("skip_reconcile_forbid_cancel") and (
-            not tools.config["test_enable"]
-            or self.env.context.get("test_reconcile_forbid_cancel")
+        if not tools.config["test_enable"] or self.env.context.get(
+            "test_reconcile_forbid_cancel"
         ):
             if self._get_reconciled_amls():
                 raise ValidationError(
@@ -20,9 +19,8 @@ class AccountMove(models.Model):
         return super().button_draft()
 
     def button_cancel(self):
-        if not self.env.context.get("skip_reconcile_forbid_cancel") and (
-            not tools.config["test_enable"]
-            or self.env.context.get("test_reconcile_forbid_cancel")
+        if not tools.config["test_enable"] or self.env.context.get(
+            "test_reconcile_forbid_cancel"
         ):
             if self._get_reconciled_amls():
                 raise ValidationError(

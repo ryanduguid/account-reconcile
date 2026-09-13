@@ -23,6 +23,7 @@ class MassReconcileSimple(models.AbstractModel):
             raise ValueError("_key_field has to be defined")
         count = 0
         res = []
+        reconciled_groups = 0
         while count < len(lines):
             for i in range(count + 1, len(lines)):
                 if lines[count][self._key_field] != lines[i][self._key_field]:
@@ -43,15 +44,17 @@ class MassReconcileSimple(models.AbstractModel):
                 )
                 if reconciled:
                     res += [credit_line["id"], debit_line["id"]]
+                    reconciled_groups += 1
                     del lines[i]
                     if (
                         self.env.context.get("commit_every", 0)
-                        and len(res) % self.env.context["commit_every"] == 0
+                        and reconciled_groups % self.env.context["commit_every"] == 0
                     ):
                         # new cursor is already open in cron
                         self.env.cr.commit()  # pylint: disable=invalid-commit
                         _logger.info(
-                            "Commit the reconciliations after %d groups", len(res)
+                            "Commit the reconciliations after %d groups",
+                            reconciled_groups,
                         )
                     break
             count += 1

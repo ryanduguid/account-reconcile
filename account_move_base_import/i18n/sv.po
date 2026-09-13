@@ -419,7 +419,7 @@ msgstr "Senast uppdaterad den"
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__launch_import_completion
 msgid "Launch completion after import"
-msgstr "Slutförande av lansering efter import"
+msgstr "Starta komplettering efter import"
 
 #. module: account_move_base_import
 #. odoo-python

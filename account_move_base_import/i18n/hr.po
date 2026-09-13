@@ -253,12 +253,12 @@ msgstr "Iz naziva stavke (bazirano na nazivu partnera)"
 #. module: account_move_base_import
 #: model:ir.model.fields.selection,name:account_move_base_import.selection__account_move_completion_rule__function_to_call__get_from_name_and_supplier_invoice
 msgid "From line name (based on supplier invoice number)"
-msgstr "Iz naziva datoteke (bazirano na broju računa dobavljača)"
+msgstr "Iz naziva stavke (bazirano na broju računa dobavljača)"
 
 #. module: account_move_base_import
 #: model:ir.model.fields.selection,name:account_move_base_import.selection__account_journal__import_type__generic_csvxls_so
 msgid "Generic .csv/.xls based on SO Name"
-msgstr "Generički .csv/.xls bazirano na proju ponude"
+msgstr "Generički .csv/.xls prema nazivu prodajnog naloga"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_journal__has_message

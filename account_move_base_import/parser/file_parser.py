@@ -107,6 +107,8 @@ class FileParser(AccountMoveImportParser):
         Exception. We skip the validation step if the file header is provided
         separately (in the field: fieldnames).
         """
+        if not self.result_row_list:
+            raise UserError(self.env._("Nothing to import: The file is empty"))
         if self.fieldnames is None:
             parsed_cols = list(self.result_row_list[0].keys())
             for col in self.keys_to_validate:

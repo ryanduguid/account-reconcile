@@ -383,7 +383,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_move_completion_rule__write_uid
 #: model:ir.model.fields,field_description:account_move_base_import.field_credit_statement_import__write_uid
 msgid "Last Updated by"
-msgstr "ültima actualización por"
+msgstr "Última actualización por"
 
 #. module: account_move_base_import
 #: model:ir.model.fields,field_description:account_move_base_import.field_account_move_completion_rule__write_date

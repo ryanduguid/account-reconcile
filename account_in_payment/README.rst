@@ -62,7 +62,7 @@ Authors
 Contributors
 ------------
 
-- Enric Tobella (``Dixmit <https://www.dixmit.com/>``\ \_\_)
+- Enric Tobella (`Dixmit <https://www.dixmit.com/>`__)
 
 Maintainers
 -----------

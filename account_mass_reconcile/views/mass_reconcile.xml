@@ -123,7 +123,7 @@ The lines should have the same partner, and the credit entry ref. is matched wit
                     icon="fa-cogs"
                     name="run_reconcile"
                     colspan="4"
-                    string="Start Auto Reconcilation"
+                    string="Start Auto Reconciliation"
                     type="object"
                 />
                 <button

@@ -98,8 +98,7 @@ class BaseCompletion(AccountTestInvoicingCommon):
             else:
                 test_text = f"Partner id should be empty after completion \
                 (partner_name: {case.partner_name}, line_name: {case.line_label})"
-                self.assertNotEqual(
-                    self.partner,
+                self.assertFalse(
                     self.move_line.partner_id,
                     test_text,
                 )

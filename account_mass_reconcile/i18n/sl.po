@@ -116,13 +116,13 @@ msgstr "Št. priponk"
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.account_mass_reconcile_form
 msgid "Automatic Mass Reconcile"
-msgstr "Samodejno preprosto usklajevanje"
+msgstr "Samodejno množično usklajevanje"
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.mass_reconcile_history_form
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_mass_reconcile_history_search
 msgid "Automatic Mass Reconcile History"
-msgstr "Zgodovina samodejnih preprostih usklajevanj"
+msgstr "Zgodovina samodejnih množičnih usklajevanj"
 
 #. module: account_mass_reconcile
 #. odoo-python
@@ -229,7 +229,7 @@ msgstr "Prikaz usklajenih postavk po zadnjem zagonu"
 #. module: account_mass_reconcile
 #: model:ir.actions.server,name:account_mass_reconcile.ir_cron_run_reconciliations_ir_actions_server
 msgid "Do Automatic Reconciliations"
-msgstr "Izvedi samodejne odpise"
+msgstr "Izvedi samodejne uskladitve"
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile_method___filter
@@ -292,18 +292,14 @@ msgstr "Zgodovina"
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_res_company__reconciliation_commit_every
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_res_config_settings__reconciliation_commit_every
 msgid "How often to commit when performing automatic reconciliation."
-msgstr "Pogostost knjiženja ob samodejnem usklajevanju."
+msgstr "Kako pogosto naj se pri samodejnem usklajevanju izvede commit."
 
 #. module: account_mass_reconcile
 #: model_terms:ir.ui.view,arch_db:account_mass_reconcile.view_account_config
 msgid ""
 "How often to commit when performing automatic reconciliation.\n"
 "                  Leave zero to commit only at the end of the process."
-msgstr ""
-"Kako pogosto naj se podatki shranijo med izvajanjem samodejnega "
-"usklajevanja.\n"
-"                  Če pustite vrednost nič, se podatki shranijo šele ob koncu "
-"postopka."
+msgstr "Kako pogosto naj se pri samodejnem usklajevanju izvede commit.\nVrednost 0 pomeni, da se commit izvede samo na koncu postopka."
 
 #. module: account_mass_reconcile
 #: model:ir.model.fields,field_description:account_mass_reconcile.field_account_mass_reconcile__id
@@ -386,18 +382,18 @@ msgstr "Zadnja kronologija"
 #: model:ir.model.fields,help:account_mass_reconcile.field_res_company__reconciliation_commit_every
 #: model:ir.model.fields,help:account_mass_reconcile.field_res_config_settings__reconciliation_commit_every
 msgid "Leave zero to commit only at the end of the process."
-msgstr "Za knjiženje le ob koncu procesa pustite prazno."
+msgstr "Vrednost 0 pomeni, da se commit izvede samo na koncu postopka."
 
 #. module: account_mass_reconcile
 #: model:ir.actions.act_window,name:account_mass_reconcile.action_account_mass_reconcile
 #: model:ir.ui.menu,name:account_mass_reconcile.menu_mass_reconcile
 msgid "Mass Automatic Reconcile"
-msgstr "Samodejno preprosto usklajevanje"
+msgstr "Samodejno množično usklajevanje"
 
 #. module: account_mass_reconcile
 #: model:ir.actions.act_window,name:account_mass_reconcile.action_mass_reconcile_history
 msgid "Mass Automatic Reconcile History"
-msgstr "Zgodovina samodejnih preprostih usklajevanj"
+msgstr "Zgodovina samodejnih množičnih usklajevanj"
 
 #. module: account_mass_reconcile
 #: model:ir.model,name:account_mass_reconcile.model_mass_reconcile_advanced
