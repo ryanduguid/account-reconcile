@@ -34,7 +34,7 @@ msgstr "No se pueden cancelar las entradas reconciliadas."
 #: code:addons/account_move_reconcile_forbid_cancel/models/account_move.py:0
 #, python-format
 msgid "You cannot reset to draft reconciled entries."
-msgstr "No se pueden anular los borradores de entradas conciliadas."
+msgstr "No se pueden restablecer a borrador los asientos conciliados."
 
 #~ msgid "Journal Entries"
 #~ msgstr "Asientos contables"
