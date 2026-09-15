@@ -76,10 +76,7 @@ msgid ""
 "Set the minimum word length to search for. If you set this to 4, and the "
 "statement line's label is 'hello you', it will only search for 'hello', not "
 "for 'you'"
-msgstr ""
-"Imposta la lunghezza minima della parola da cercare. Se si imposta questo "
-"valore a 4 e l'etichetta della riga di testo è 'ciao amico', la ricerca "
-"includerà solo 'ciao' e non 'amico'"
+msgstr "Imposta la lunghezza minima della parola da cercare. Se si imposta questo valore a 4 e l'etichetta della riga di testo è 'ciao tu', la ricerca includerà solo 'ciao' e non 'tu'"
 
 #. module: account_reconcile_sale_order
 #: model:ir.model.fields,help:account_reconcile_sale_order.field_account_reconcile_model__sale_order_matching_payment_method_ids

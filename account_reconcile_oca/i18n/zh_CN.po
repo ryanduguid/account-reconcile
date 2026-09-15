@@ -233,7 +233,7 @@ msgstr "天"
 #. odoo-javascript
 #: code:addons/account_reconcile_oca/static/src/xml/reconcile.xml:0
 msgid "Debit"
-msgstr "货方"
+msgstr "借方"
 
 #. module: account_reconcile_oca
 #: model:ir.model.fields,field_description:account_reconcile_oca.field_account_account_reconcile__display_name
