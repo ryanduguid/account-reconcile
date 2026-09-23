@@ -941,7 +941,7 @@ class AccountBankStatementLine(models.Model):
             default_values_list = [
                 {
                     "date": move.date,
-                    "ref": _("Reversal of: %s", move.name),
+                    "ref": self.env._("Reversal of: %s", move.name),
                 }
                 for move in to_reverse
             ]
