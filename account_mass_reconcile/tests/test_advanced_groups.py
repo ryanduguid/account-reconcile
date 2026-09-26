@@ -2,6 +2,7 @@
 
 from datetime import date, timedelta
 from itertools import permutations, product
+from unittest.mock import patch
 
 from odoo.tests import tagged
 
@@ -167,3 +168,78 @@ class TestAdvancedGroups(AccountTestInvoicingCommon):
                 order=order, reverse_debits=reverse_debits, residual=residual
             ):
                 self._check_case(order, reverse_debits, residual=residual)
+
+    def test_bridge_merges_all_groups_before_chunking(self):
+        reconciler = self.env["mass.reconcile.advanced.ref"].new(
+            {"account_id": self.company_data["default_account_receivable"].id}
+        )
+        credit_lines = [
+            {"id": index, "ref": reference, "partner_id": 1}
+            for index, reference in enumerate(("A", "X", "B", "C", "Z", "?"), 1)
+        ]
+        credit_lines.append({"id": 7, "ref": "A", "partner_id": False})
+        debit_lines = [
+            {"id": 10, "ref": "A", "name": "Z", "partner_id": 1},
+            {"id": 11, "ref": "X", "name": "X", "partner_id": 1},
+            {"id": 12, "ref": "B", "name": "Z", "partner_id": 1},
+            {"id": 13, "ref": "C", "name": "Z", "partner_id": 1},
+            {"id": 14, "ref": "A", "name": "Z", "partner_id": 2},
+        ]
+        expected = [{1, 3, 4, 5, 10, 12, 13}, {2, 11}]
+        for chunk_size in (0, 1, 2):
+            with self.subTest(chunk_size=chunk_size):
+                self.company_data["company"].reconciliation_commit_every = chunk_size
+                with (
+                    patch.object(
+                        type(reconciler), "_rec_group", return_value=[]
+                    ) as run,
+                    patch.object(
+                        type(reconciler), "_rec_group_by_chunk", return_value=[]
+                    ) as run_chunks,
+                ):
+                    reconciler._rec_auto_lines_advanced(credit_lines, debit_lines)
+                active = run_chunks if chunk_size else run
+                inactive = run if chunk_size else run_chunks
+                active.assert_called_once()
+                inactive.assert_not_called()
+                groups, lines_by_id, *chunk_args = active.call_args.args
+                self.assertEqual(groups, expected)
+                self.assertEqual(chunk_args, [chunk_size] if chunk_size else [])
+                self.assertEqual(
+                    set(lines_by_id),
+                    {line["id"] for line in credit_lines + debit_lines},
+                )
+
+    def test_profile_history_reports_only_full_reconciliations(self):
+        for residual in (0.0, 0.11, -0.11):
+            with self.subTest(residual=residual):
+                reconciler, lines = self._make_case(residual=residual)
+                profile = self.env["account.mass.reconcile"].create(
+                    {
+                        "name": "Connected group fixture",
+                        "account_id": reconciler.account_id.id,
+                        "company_id": reconciler.company_id.id,
+                    }
+                )
+                self.env["account.mass.reconcile.method"].create(
+                    {
+                        "task_id": profile.id,
+                        "name": "mass.reconcile.advanced.ref",
+                        "write_off": reconciler.write_off,
+                        "account_lost_id": reconciler.account_lost_id.id,
+                        "account_profit_id": reconciler.account_profit_id.id,
+                        "journal_id": reconciler.journal_id.id,
+                        "date_base_on": reconciler.date_base_on,
+                        "_filter": str([("id", "in", lines.ids)]),
+                    }
+                )
+                profile.run_reconcile()
+                self.assertEqual(len(profile.history_ids), 1)
+                self.assertEqual(
+                    set(profile.history_ids.reconcile_line_ids.ids),
+                    set() if residual else set(lines.ids),
+                )
+                self.assertFalse(self._writeoffs(lines))
+                self.assertAlmostEqual(
+                    sum(lines.mapped("amount_residual")), residual, 2
+                )

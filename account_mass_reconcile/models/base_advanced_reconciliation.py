@@ -295,15 +295,21 @@ class MassReconcileAdvanced(models.AbstractModel):
                     continue
                 opposite_ids = [opp["id"] for opp in opposite_lines]
                 line_ids = opposite_ids + [credit_line["id"]]
-                for group in reconcile_groups:
-                    if any([lid in group for lid in opposite_ids]):
-                        _logger.debug(
-                            "New lines %s matched with an existing " "group %s",
-                            line_ids,
-                            group,
-                        )
-                        group.update(line_ids)
-                        break
+                matching_groups = [
+                    index
+                    for index, group in enumerate(reconcile_groups)
+                    if not group.isdisjoint(opposite_ids)
+                ]
+                if matching_groups:
+                    group = reconcile_groups[matching_groups[0]]
+                    _logger.debug(
+                        "New lines %s matched existing groups %s",
+                        line_ids,
+                        matching_groups,
+                    )
+                    group.update(line_ids)
+                    for index in reversed(matching_groups[1:]):
+                        group.update(reconcile_groups.pop(index))
                 else:
                     _logger.debug("New group of lines matched %s", line_ids)
                     reconcile_groups.append(set(line_ids))
