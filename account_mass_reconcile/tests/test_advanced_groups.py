@@ -106,6 +106,15 @@ class TestAdvancedGroups(AccountTestInvoicingCommon):
             self.assertAlmostEqual(
                 sum(lines.mapped("amount_residual_currency")), residual, 2
             )
+            self.assertAlmostEqual(
+                sum(abs(line.amount_residual) for line in lines), abs(residual), 2
+            )
+            self.assertAlmostEqual(
+                sum(abs(line.amount_residual_currency) for line in lines),
+                abs(residual),
+                2,
+            )
+            self.assertTrue(lines.matched_debit_ids | lines.matched_credit_ids)
             return
 
         self.assertEqual(set(result), set(lines.ids))
@@ -233,7 +242,11 @@ class TestAdvancedGroups(AccountTestInvoicingCommon):
                         "_filter": str([("id", "in", lines.ids)]),
                     }
                 )
-                profile.run_reconcile()
+                with self.assertNoLogs(
+                    "odoo.addons.account_mass_reconcile.models.mass_reconcile",
+                    level="ERROR",
+                ):
+                    profile.run_reconcile()
                 self.assertEqual(len(profile.history_ids), 1)
                 self.assertEqual(
                     set(profile.history_ids.reconcile_line_ids.ids),
@@ -243,3 +256,12 @@ class TestAdvancedGroups(AccountTestInvoicingCommon):
                 self.assertAlmostEqual(
                     sum(lines.mapped("amount_residual")), residual, 2
                 )
+                self.assertAlmostEqual(
+                    sum(abs(line.amount_residual) for line in lines), abs(residual), 2
+                )
+                self.assertAlmostEqual(
+                    sum(abs(line.amount_residual_currency) for line in lines),
+                    abs(residual),
+                    2,
+                )
+                self.assertTrue(lines.matched_debit_ids | lines.matched_credit_ids)
