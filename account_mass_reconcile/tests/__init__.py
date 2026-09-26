@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from . import test_advanced_groups
+from . import test_advanced_matchers
 from . import test_onchange_company
 from . import test_reconcile
 from . import test_scenario_reconcile
