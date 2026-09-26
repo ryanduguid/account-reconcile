@@ -147,8 +147,8 @@ class MassReconcileAdvanced(models.AbstractModel):
                 return True
         return False
 
-    @staticmethod
-    def _compare_matchers(matcher, opposite_matcher):
+    @classmethod
+    def _compare_matchers(cls, matcher, opposite_matcher):
         """
         Prepare and check the matchers to compare
         """
@@ -162,7 +162,7 @@ class MassReconcileAdvanced(models.AbstractModel):
             mvalue = (mvalue,)
         if not isinstance(omvalue, list | tuple):
             omvalue = (omvalue,)
-        return MassReconcileAdvanced._compare_matcher_values(mkey, mvalue, omvalue)
+        return cls._compare_matcher_values(mkey, mvalue, omvalue)
 
     def _compare_opposite(self, move_line, opposite_move_line, matchers):
         """Iterate over the matchers of the move lines vs opposite move lines
