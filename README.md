@@ -10,6 +10,12 @@
 
 <!-- /!\ do not modify above this line -->
 
+**Fork status**
+
+[![Fork code quality](https://app.codacy.com/project/badge/Grade/9074b9cfe5a448a787d14ba20e199a99?branch=18.0)](https://app.codacy.com/gh/ryanduguid/account-reconcile/dashboard)
+[![Fork tests](https://github.com/ryanduguid/account-reconcile/actions/workflows/test.yml/badge.svg?branch=18.0)](https://github.com/ryanduguid/account-reconcile/actions/workflows/test.yml)
+[![Fork pre-commit](https://github.com/ryanduguid/account-reconcile/actions/workflows/pre-commit.yml/badge.svg?branch=18.0)](https://github.com/ryanduguid/account-reconcile/actions/workflows/pre-commit.yml)
+
 account-reconcile
 
 <!-- /!\ do not modify below this line -->
