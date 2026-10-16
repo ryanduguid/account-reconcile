@@ -10,6 +10,9 @@
 
 <!-- /!\ do not modify above this line -->
 
+The badges above refer to
+[upstream OCA/account-reconcile](https://github.com/OCA/account-reconcile).
+
 **Fork status**
 
 [![Fork code quality](https://app.codacy.com/project/badge/Grade/9074b9cfe5a448a787d14ba20e199a99?branch=18.0)](https://app.codacy.com/gh/ryanduguid/account-reconcile/dashboard)
